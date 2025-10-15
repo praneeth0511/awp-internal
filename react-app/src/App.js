@@ -1,26 +1,19 @@
-import React, { Component } from "react";
-//create a class component that accepts the arbitarty inputs called props and display the value
-class App extends Component{
-  constructor(props){
-    super(props)
-    this.value=""
-    this.state={
-      "name":''
+import React from 'react'
+
+class App extends React.Component{
+    constructor(props){
+        super(props)
+        this.state={count:0}
     }
-   
-  }
-  handle(){
-    this.value="hello"
-  }
-  render(){
-    return(
-      <div>
-        <h1>Class Component</h1>
-        <input type="text"  onClick={handle()}/>
-        <h1>{this.setState.name}</h1>
-      </div>
-    )
-  }
+
+    render(){
+        return(<>
+            <h1>Class Component </h1>
+            <p>Passed props are {this.props.name},{this.props.rollno}</p>
+            </>
+        )
+    }
+
 }
 
-export default App;
+export default App
